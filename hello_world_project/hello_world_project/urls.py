@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# 追加
+from hello_world_app.views import top 
+
 urlpatterns = [
+    # この行を追加
+    path('',top,name='top'),
+    
     path('admin/', admin.site.urls),
 ]
